@@ -564,12 +564,15 @@ typingText3: `Tiga bulan rasanya cepet banget, tapi berasa udah banyak banget ya
   }
 
   // ====== PAGE 1 ======
-  function startJourney() {
-    // try play music
+function startJourney() {
     const bgm = document.getElementById('bgm');
-    bgm.play().catch(() => {});
+
+    bgm.play()
+        .then(() => console.log("music playing"))
+        .catch(err => console.log(err));
+
     goToPage(2);
-  }
+}
 
   // ====== PAGE 2 — PASSWORD ======
   function checkPw() {
