@@ -549,7 +549,7 @@ const TOTAL_STARS = 15;
   let gameHearts = [];
 
   function initGame() {
-    heartsCollected = 0;
+    starsCollected = 0;
     updateCounter();
     document.getElementById('gameSuccess').classList.remove('show');
     const area = document.getElementById('gameArea');
@@ -577,7 +577,7 @@ const TOTAL_STARS = 15;
 
   function collectHeart(btn, e) {
     if (!btn.parentNode) return;
-    heartsCollected++;
+    starsCollected++;
     updateCounter();
     // pop animation
     const pop = document.createElement('div');
@@ -588,14 +588,14 @@ const TOTAL_STARS = 15;
     document.getElementById('gameArea').appendChild(pop);
     setTimeout(() => pop.remove(), 500);
     btn.remove();
-    if (heartsCollected >= TOTAL_STARS) {
+    if (starsCollected >= TOTAL_STARS) {
       setTimeout(showGameSuccess, 400);
     }
   }
 
   function updateCounter() {
   document.getElementById('gameCounter').textContent =
-    heartsCollected + ' / ' + TOTAL_STARS + ' Stars';
+   starsCollected + ' / ' + TOTAL_STARS + ' Stars';
 }
 
   function showGameSuccess() {
