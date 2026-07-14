@@ -544,8 +544,8 @@ function startJourney() {
 }
 
   // ====== PAGE 3 — GAME ======
-  let heartsCollected = 0;
-  const TOTAL_HEARTS = 15;
+ let starsCollected = 0;
+const TOTAL_STARS = 15;
   let gameHearts = [];
 
   function initGame() {
@@ -594,8 +594,9 @@ function startJourney() {
   }
 
   function updateCounter() {
-    document.getElementById('gameCounter').textContent = heartsCollected + ' / ' + TOTAL_HEARTS + ' Hearts';
-  }
+  document.getElementById('gameCounter').textContent =
+    heartsCollected + ' / ' + TOTAL_HEARTS + ' Stars';
+}
 
   function showGameSuccess() {
     // confetti
