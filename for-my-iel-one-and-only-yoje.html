@@ -556,7 +556,7 @@ function startJourney() {
     // remove old hearts
     area.querySelectorAll('.floating-heart-btn').forEach(e => e.remove());
     gameHearts = [];
-    const emojis = ['❤︎','❤︎','❤︎','❤︎','❤︎','❤︎','❤︎'];
+    const emojis = ['★','★','★','★','★','★','★'];
     for (let i = 0; i < 15; i++) {
       spawnHeart(area, emojis[i % emojis.length], i);
     }
