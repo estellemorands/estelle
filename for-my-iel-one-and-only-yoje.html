@@ -588,14 +588,14 @@ const TOTAL_STARS = 15;
     document.getElementById('gameArea').appendChild(pop);
     setTimeout(() => pop.remove(), 500);
     btn.remove();
-    if (heartsCollected >= TOTAL_HEARTS) {
+    if (heartsCollected >= TOTAL_STARS) {
       setTimeout(showGameSuccess, 400);
     }
   }
 
   function updateCounter() {
   document.getElementById('gameCounter').textContent =
-    heartsCollected + ' / ' + TOTAL_HEARTS + ' Stars';
+    heartsCollected + ' / ' + TOTAL_STARS + ' Stars';
 }
 
   function showGameSuccess() {
