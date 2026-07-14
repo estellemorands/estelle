@@ -523,7 +523,7 @@ function startJourney() {
 
   // ====== PAGE 3 — GAME ======
   let heartsCollected = 0;
-  const TOTAL_HEARTS = 14;
+  const TOTAL_HEARTS = 15;
   let gameHearts = [];
 
   function initGame() {
@@ -535,7 +535,7 @@ function startJourney() {
     area.querySelectorAll('.floating-heart-btn').forEach(e => e.remove());
     gameHearts = [];
     const emojis = ['❤︎','❤︎','❤︎','❤︎','❤︎','❤︎','❤︎'];
-    for (let i = 0; i < 14; i++) {
+    for (let i = 0; i < 15; i++) {
       spawnHeart(area, emojis[i % emojis.length], i);
     }
   }
